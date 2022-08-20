@@ -1,0 +1,36 @@
+{% extends 'bundesliga/index.html' %}
+
+{% block body %}
+    <h1 class="title">Standings</h1>
+    <div class="standings">
+        {% for stat in stats %}
+            <div class="team-stats">
+                <div class="rank">
+                    <div>
+                        <p><strong>{{ forloop.counter }}</strong>.</p>
+                        <img src="{{ stat.TeamIconUrl }}" alt="team logo">
+                    </div>
+                    <p>{{ stat.TeamName }}</p>
+                </div>
+                <div class="stats">
+                    <div>
+                        <p><strong>Total Matches</strong></p>
+                        <p>{{ stat.Matches }}</p>
+                    </div>
+                    <div>
+                        <p><strong>Won</strong></p>
+                        <p>{{ stat.Won }}</p>
+                    </div>
+                    <div>
+                        <p><strong>Lost</strong></p>
+                        <p>{{ stat.Lost }}</p>
+                    </div>
+                    <div>
+                        <p><strong>Draw</strong></p>
+                        <p>{{ stat.Draw }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

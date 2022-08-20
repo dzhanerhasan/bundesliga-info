@@ -1,0 +1,39 @@
+{% extends 'bundesliga/index.html' %}
+
+{% block body %}
+<h1 class="title">All Matches of {{ matches.0.LeagueName|slice:'-9:' }} Season</h1>
+<div class="container">
+    {% for match in matches %}
+    <div class="info">
+        <div class="teams">
+            <div class="team-info">
+                <div class="team-desc">
+                    <img src="{{ match.Team1.TeamIconUrl }}" alt="team logo">
+                    <p>{{ match.Team1.TeamName }}</p>
+                </div>
+                {% if match.MatchIsFinished %}
+                <p>{{ match.MatchResults.0.PointsTeam1 }}</p>
+                {% endif %}
+            </div>
+            <div class="team-info">
+                <div class="team-desc">
+                    <img src="{{ match.Team2.TeamIconUrl }}" alt="team logo">
+                    <p>{{ match.Team2.TeamName }}</p>
+                </div>
+                {% if match.MatchIsFinished %}
+                <p>{{ match.MatchResults.0.PointsTeam2 }}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="date">
+            {% if match.MatchIsFinished %}
+            <p>FT</p>
+            {% else %}
+            <p>{{ match.match_time|date:'H:i' }}</p>
+            {% endif %}
+            <p>{{ match.match_date|date:'d M, Y' }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

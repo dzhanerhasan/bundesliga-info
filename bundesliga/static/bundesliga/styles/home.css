@@ -1,0 +1,69 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+    border: solid 1px gainsboro;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 100px;
+
+    grid-gap: 1px;
+    background-color: gainsboro;
+    overflow: hidden;
+
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.info:hover {
+    filter: brightness(90%);
+}
+
+.teams {
+    flex: 5;
+    border-right: solid 1px gainsboro;
+    padding-right: 8px;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.team-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team-desc {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.team-desc img {
+    width: 30px;
+    height: 30px;
+}
+
+.date {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-desc p, .date p {
+    font-size: 14px;
+    text-align: center;
+}

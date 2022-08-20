@@ -1,0 +1,31 @@
+{% extends 'bundesliga/index.html' %}
+
+{% block body %}
+<h1 class="title">Upcoming Matches<br>Matchday {{ current_gameday.GroupOrderID }}/34</h1>
+
+<div class="upcoming">
+    {% for team in teams %}
+    {% if not team.MatchIsFinished %}
+    <div class="match-div">
+        <div class="match">
+            <div class="team-div">
+                <img src="{{ team.Team1.TeamIconUrl }}" alt="team logo" class="team-logo">
+                <p>{{ team.Team1.TeamName }}</p>
+            </div>
+            <h3>vs.</h3>
+            <div class="team-div">
+                <img src="{{ team.Team2.TeamIconUrl }}" alt="team logo" class="team-logo">
+                <p>{{ team.Team2.TeamName }}</p>
+            </div>
+        </div>
+        <div class="match-date">
+            {{ team.match_time|date:'H:i' }}
+            <br>
+            {{ team.match_date|date:'d M, Y' }}
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}

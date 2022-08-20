@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    background-color: white;
+    border-bottom: solid 1px gainsboro;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo-div {
+    flex-shrink: 0;
+    width: 65px;
+}
+
+.logo-pic {
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: solid 1px gainsboro;
+    border-radius: 5px;
+}
+
+#search-bar {
+    padding: 5px;
+    width: 300px;
+    border: none;
+}
+
+.search-icon {
+    padding: 5px;
+    border-left: solid 1px gainsboro;
+    background-color: #D0D0D0;
+    border: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation img {
+    width: 30px;
+}
+
+.navigation a:nth-child(3) img {
+    width: 33px;
+}
+
+.title {
+    margin-top: 90px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title {
+        margin-top: 180px;
+    }
+}

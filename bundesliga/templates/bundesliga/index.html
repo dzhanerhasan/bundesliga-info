@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bundesliga/styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'bundesliga/styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'bundesliga/styles/upcoming.css' %}">
+    <link rel="stylesheet" href="{% static 'bundesliga/styles/team_stats.css' %}">
+    <title>Bundesliga Info</title>
+</head>
+<body>
+    <header>
+        <div class="logo-div">
+            <a href="{% url 'home' %}"><img class="logo-pic" src="{% static 'bundesliga/images/bundesliga_logo.png' %} " alt="League Logo"></a>
+        </div>
+        <form class="search" method="get" action="">
+            <input type="text" name="teams" id="search-bar" placeholder="Enter team's name e.g. 'Bayern'">
+            <button class="search-icon" type="submit">
+                <img src="{% static 'bundesliga/images/search.svg' %}" alt="search icon">
+            </button>
+        </form>
+        <div class="navigation">
+            <a href="{% url 'home' %}"><img src="{% static 'bundesliga/images/house-door.svg' %}" alt="house icon"></a>
+            <a href="{% url 'upcoming' %}"><img src="{% static 'bundesliga/images/calendar.svg' %}" alt="calender icon"></a>
+            <a href="{% url 'stats' %}"><img src="{% static 'bundesliga/images/rankings.png' %}" alt="rankings icon"></a>
+        </div>
+    </header>
+        {% block body %}
+        {% endblock %}
+</body>
+</html>
