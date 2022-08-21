@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-bsurlz#mc4=inwo3y#)-d!$mixt!+#wwj+@eqiv(nvs7e))(b#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'bundesliga-info.herokuapp.com',
-]
+ALLOWED_HOSTS = ['127.0.0.1',
+                 'bundesliga-info.herokuapp.com',
+                 ]
 
 
 # Application definition
@@ -49,6 +49,7 @@ COMPRESS_ENABLED = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -133,8 +134,7 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
