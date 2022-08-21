@@ -50,6 +50,7 @@ header {
     border-left: solid 1px gainsboro;
     background-color: #D0D0D0;
     border: none;
+    cursor: pointer;
 }
 
 .navigation {
