@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-bsurlz#mc4=inwo3y#)-d!$mixt!+#wwj+@eqiv(nvs7e))(b#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'bundesliga-info.herokuapp.com',
+]
 
 
 # Application definition
