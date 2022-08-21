@@ -1,1 +1,1 @@
-web: gunicorn bundesliga-info.wsgi
+web: gunicorn bundesliga_info.wsgi
