@@ -46,6 +46,9 @@ def upcoming_matches(request):
 
     set_datetime(teams_data)
 
+    # Filter matches that are not finished yet.
+    teams_data = [x for x in teams_data if not x['MatchIsFinished']]
+
     if get_team:
         teams_data = filter_teams(get_team, teams_data)
 

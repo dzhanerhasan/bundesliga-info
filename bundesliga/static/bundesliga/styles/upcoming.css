@@ -13,6 +13,12 @@
 
 }
 
+.upcoming h1 {
+    grid-column: span 2;
+    text-align: center;
+    align-self: center;
+}
+
 .match-div {
     border: solid 1px gainsboro;
     border-radius: 8px;

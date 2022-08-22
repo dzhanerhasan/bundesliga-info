@@ -5,7 +5,6 @@
 
 <div class="upcoming">
     {% for team in teams %}
-    {% if not team.MatchIsFinished %}
     <div class="match-div">
         <div class="match">
             <div class="team-div">
@@ -24,7 +23,8 @@
             {{ team.match_date|date:'d M, Y' }}
         </div>
     </div>
-    {% endif %}
+    {% empty %}
+        <h1>No upcoming matches in the current matchday!</h1>
     {% endfor %}
 </div>
 
