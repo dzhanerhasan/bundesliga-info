@@ -1,4 +1,4 @@
-This is a small website that displays data of Bundesliga games, using the http://www.openligadb.de/ api.
+This is a small website that displays data on Bundesliga games, using the http://www.openligadb.de/ API.
 
 The home page displays all the matches of the current season. Users can navigate to the other pages by clicking the icons at the top-right corner (or below the search bar if using mobile devices).
 
